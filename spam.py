@@ -5,7 +5,7 @@ import os
 
 
 def subrek():
-    os.system("xdg-open https://youtube.com/channel/UCFeZ5BGt8lbOZwIj2MNOlIQ")
+    os.system("xdg-open https://www.youtube.com/channel/UCYPbh8b8XEsDnYhwmwgjhsg")
     os.system("clear")
 
 def banner():

